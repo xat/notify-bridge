@@ -3,7 +3,7 @@
 JSON-RPC notification bridge
 
 notify-bridge transforms JSON-RPC notifications which it receives through POST requests
-into Socket.IO events. Basicly this means you can use this as a bridge to send push notifications
+into socket.io events. Basicly this means you can use this as a bridge to send push notifications
 out of PHP (or any other language) to your clients (=browsers).
 
 Installation is quite simple if you have node installed:
@@ -11,7 +11,7 @@ Installation is quite simple if you have node installed:
     $ npm install -g https://github.com/xat/notify-bridge/tarball/master
 
 Now you have a commandline tool called 'notify-bridge'. To get some an idea
-about the configuration options type:
+about the configuration options type-in:
 
     $ notify-bridge --help
 
@@ -39,15 +39,15 @@ the default options is:
     $ notify-bridge --start
 
 Emitting notifications is done by sending POST requests to the bridge. The POST request
-must contain  a field named 'rpc'. Within this field you send the JSON. This
-is an example using Curl from the commandline:
+must contain a field named 'rpc'. Within this field you send the JSON.
+This is an example using Curl from the commandline to trigger a notification 'update':
 
-    curl --data "rpc={\"method\":\"update\",\"jsonrpc\":\"2.0\"}" http://127.0.0.1:4440
+    $ curl --data "rpc={\"method\":\"update\",\"jsonrpc\":\"2.0\"}" http://127.0.0.1:4440
 
 If you are using PHP as Endpoint you can also checkout [notify-php](https://github.com/xat/notify-php/)
 for sending notifications.
 
-To Receive the notifications from within the browser you at first have to include Socket.IO:
+To Receive the notifications from within the browser you at first have to include socket.io Javascript:
 
 ```html
 <script src="http://<your-host>:4450/socket.io/socket.io.js"></script>
@@ -57,10 +57,9 @@ Now create a connection to the bridge and listen for new notifications:
 ```javascript
 var socket = io.connect('<your-host>:4450/');
 socket.on('update', function(data) {
-  console.log(data);
+  console.log(data); // received a notification
 });
 ```
-
 
 ## License
 Copyright (c) 2012 Simon Kusterer  
