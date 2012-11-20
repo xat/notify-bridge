@@ -10,7 +10,7 @@ Installation is quite simple if you have node installed:
 
     $ npm install -g https://github.com/xat/notify-bridge/tarball/master
 
-Now you have a commandline tool called 'notify-bridge'. To get some an idea
+Now you have a commandline tool called 'notify-bridge'. To get an idea
 about the configuration options type-in:
 
     $ notify-bridge --help
