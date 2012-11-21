@@ -8,7 +8,7 @@ out of PHP (or any other language) to your clients (=browsers).
 
 Installation is quite simple if you have node installed:
 
-    $ npm install -g https://github.com/xat/notify-bridge/tarball/master
+    $ npm install -g notify-bridge
 
 Now you have a commandline tool called 'notify-bridge'. To get an idea
 about the configuration options type-in:
