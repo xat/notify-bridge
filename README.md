@@ -10,6 +10,9 @@ Installation is quite simple if you have node installed:
 
     $ npm install -g notify-bridge
 
+There is also a standalone version availible. Look into the [Downloads section](https://github.com/xat/notify-bridge/downloads)
+for that.
+
 Now you have a commandline tool called 'notify-bridge'. To get an idea
 about the configuration options type-in:
 
